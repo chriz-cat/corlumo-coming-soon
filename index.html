@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#efeee2" />
+    <meta name="description" content="Corlumo is coming soon. Business, connected." />
+    <link rel="icon" type="image/svg+xml" href="assets/cor-blue-logo.svg" />
+    <title>Corlumo - Coming Soon</title>
+    <style>
+      :root { color-scheme: light; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      * { box-sizing: border-box; }
+      html { min-height: 100%; background: #efeee2; }
+      body { min-height: 100vh; margin: 0; color: #272424; overflow-x: hidden; }
+      .ambient { position: fixed; inset: 0; overflow: hidden; pointer-events: none; }
+      .blob { position: absolute; width: 34rem; aspect-ratio: 1; border-radius: 56% 44% 38% 62%; filter: blur(90px); opacity: .75; }
+      .blob-blue { top: -19rem; right: -16rem; background: radial-gradient(circle, rgba(48,75,244,.13), transparent 72%); }
+      .blob-red { bottom: -20rem; left: -16rem; background: radial-gradient(circle, rgba(248,41,46,.11), transparent 72%); }
+      .page { position: relative; min-height: 100vh; display: flex; flex-direction: column; width: min(100% - 3rem, 1120px); margin: auto; }
+      header { padding-top: clamp(2rem, 5vw, 4.5rem); }
+      .wordmark { display: block; width: clamp(12rem, 22vw, 16rem); height: auto; }
+      .tagline { margin-top: 1rem; color: #77716c; font-size: .69rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; }
+      main { flex: 1; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(280px, .8fr); align-items: center; gap: clamp(2rem, 7vw, 7rem); padding: 4rem 0 6rem; }
+      .eyebrow { display: inline-flex; align-items: center; gap: .65rem; padding: .68rem .95rem; border: 1px solid rgba(39,36,36,.09); border-radius: 100px; background: rgba(255,255,255,.55); font-size: .72rem; font-weight: 650; }
+      .eyebrow::before { content: ""; width: .48rem; height: .48rem; border-radius: 50%; background: #304bf4; }
+      h1 { max-width: 13ch; margin: 1.6rem 0 1.25rem; font-size: clamp(3.4rem, 7vw, 6.5rem); letter-spacing: -.075em; line-height: .99; font-weight: 700; }
+      .intro { max-width: 34rem; margin: 0; color: #69635f; font-size: clamp(1rem, 1.6vw, 1.18rem); line-height: 1.7; }
+      .card { min-height: 20rem; display: flex; flex-direction: column; justify-content: space-between; padding: clamp(1.6rem, 3vw, 2.5rem); border: 1px solid rgba(255,255,255,.92); border-radius: 1.4rem; background: rgba(255,255,255,.67); box-shadow: 0 20px 50px rgba(37,32,29,.045); backdrop-filter: blur(18px); }
+      .card-mark { width: 100%; min-height: 4.8rem; display: flex; align-items: center; padding: 1rem 1.25rem; border-radius: 1rem; background: #304bf4; }
+      .card-mark img { display: block; width: 10rem; max-width: 100%; height: auto; }
+      .card-label { margin: 0 0 .75rem; color: #817b76; font-size: .68rem; font-weight: 650; letter-spacing: .18em; text-transform: uppercase; }
+      .card-copy { max-width: 20rem; margin: 0; font-size: 1.35rem; font-weight: 600; line-height: 1.35; letter-spacing: -.035em; }
+      footer { display: flex; justify-content: space-between; gap: 1rem; padding: 1.5rem 0 2rem; border-top: 1px solid rgba(39,36,36,.1); color: #817b76; font-size: .75rem; }
+      @media (max-width: 760px) {
+        .page { width: min(100% - 2.5rem, 34rem); }
+        main { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 0 4rem; }
+        h1 { font-size: clamp(3.5rem, 13vw, 5rem); }
+        .card { min-height: 15rem; }
+      }
+      @media (max-width: 380px) { footer { flex-direction: column; } }
+      @media (prefers-reduced-transparency: reduce) { .card { background: #fff; backdrop-filter: none; } }
+    </style>
+  </head>
+  <body>
+    <div class="ambient" aria-hidden="true"><div class="blob blob-blue"></div><div class="blob blob-red"></div></div>
+    <div class="page">
+      <header aria-label="Corlumo"><img class="wordmark" src="assets/cor-blue-logo.svg" width="852" height="249" alt="Corlumo" /><div class="tagline">Business, connected</div></header>
+      <main>
+        <section aria-labelledby="title">
+          <span class="eyebrow">Coming soon</span>
+          <h1 id="title">Something is taking shape.</h1>
+          <p class="intro">Corlumo is getting ready. A connected home for your business is on its way.</p>
+        </section>
+        <aside class="card" aria-label="Launch announcement">
+          <div class="card-mark"><img src="assets/cor-stone-logo.svg" width="852" height="249" alt="Corlumo" /></div>
+          <div><p class="card-label">Corlumo</p><p class="card-copy">We look forward to showing you what’s next.</p></div>
+        </aside>
+      </main>
+      <footer><span>© 2026 Corlumo</span><span>Business, connected.</span></footer>
+    </div>
+  </body>
+</html>
